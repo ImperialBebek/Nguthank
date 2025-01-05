@@ -14,19 +14,23 @@ const LoginScreen = () => {
     return (
         <View style={styles.container}>
             <Image
-                source={require('../assets/Illu_login.png')}
-                style={{ width: '100%', height: '60%',}}
-            />
-            <Text style={styles.title}>Boleh NguThank.</Text>
-            <Text style={styles.subtitle}>Asal Dibayar.</Text>
-            <InputField
-                placeholder="Email Address"
-                value={email}
-                onChangeText={setEmail}
-            />
-            <PrimaryButton onPress={handleLogin}>
-                <Text style={styles.loginText}>Masuk ke aplikasi</Text>
-            </PrimaryButton>
+                    source={require('../assets/Illu_login.png')}
+                    style={{ width: '100%', height: '60%',}}
+                />
+            <View style={{ padding: 16, gap: 32 }}>
+                <View style={{ gap: 8 }}>
+                    <Text style={styles.title}>Boleh NguThank.</Text>
+                    <Text style={styles.subtitle}>Asal Dibayar.</Text>
+                </View>
+                <InputField
+                        placeholder="Email Address"
+                        value={email}
+                        onChangeText={setEmail}
+                    />
+                    <PrimaryButton onPress={handleLogin}>
+                        <Text style={styles.loginText}>Masuk ke aplikasi</Text>
+                    </PrimaryButton>
+            </View>
         </View>
     );
 };
@@ -50,7 +54,6 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         alignItems: 'center',
         marginTop: 16,
-        fontFamily: 'PTSerif-Bold'
     },  
     loginText: {
         color: '#FFFFFF',
@@ -58,16 +61,14 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     title: {
-        fontSize: 28,
-        fontWeight: 'bold',
+        fontSize: 24,
         color: '#000000',
-        marginBottom: 8,
-        fontFamily: 'PTSerif'
+        fontFamily: 'DMSerifDisplay-Regular',
     },
       subtitle: {
         fontSize: 24,
         color: '#000000',
-        marginBottom: 32,
+
     },
 });
 
